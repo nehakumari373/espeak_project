@@ -1,0 +1,379 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <windows.h>
+#include <stdio.h>
+#include <string.h>
+#include <cstdlib>
+#include <ctime>
+#include <mmsystem.h>
+
+
+
+using namespace std;
+
+void gotoXY(int x, int y);
+void gotoXY(int x, int y)
+{
+
+
+	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD CursorPosition;
+	CursorPosition.X = x;
+	CursorPosition.Y = y;
+	SetConsoleCursorPosition(console,CursorPosition);
+}
+
+void teddy ()
+{
+
+gotoXY(50,1);
+cout<<"                     ,---.           ,---.   "<<endl;
+gotoXY(50,2);
+cout<<"                    / /^`.\\.--''''-./,'^\\ \\	"<<endl;
+gotoXY(50,3);
+cout<<"                    \\ \\    _       _    / /	"<<endl;
+gotoXY(50,4);
+cout<<"                     `./  / __   __ \\  \\,'	"<<endl;
+gotoXY(50,5);
+cout<<"                      /    /_O)_(_O\\    \\	"<<endl;
+gotoXY(50,6);
+cout<<"                      |  .-'  ___  `-.  |	"<<endl;
+gotoXY(50,7);
+cout<<"                   .--|       \\_/       |--.	"<<endl;
+gotoXY(50,8);
+cout<<"                 ,'    \\   \\   |   /   /    `."<<endl;
+gotoXY(50,9);
+cout<<"                /       `.  `--^--'  ,'       \\"<<endl;
+gotoXY(50,10);
+cout<<"             .-^^^^^-.    `--.___.--'     .-^^^^^-."<<endl;
+gotoXY(50,11);
+cout<<".-----------/         \\------------------/         \\--------------."<<endl;
+gotoXY(50,12);
+cout<<"| .---------\\         /----------------- \\         /------------. |"<<endl;
+gotoXY(50,13);
+cout<<"| |          `-`--`--'                    `--'--'-'             | |"<<endl;
+gotoXY(50,14);
+cout<<"| |                                                             | |"<<endl;
+gotoXY(50,15);
+cout<<"| |                                                             | |"<<endl;
+gotoXY(50,16);
+cout<<"| |                                                             | |"<<endl;
+gotoXY(50,17);
+cout<<"| |                                                             | |"<<endl;
+gotoXY(50,18);
+cout<<"| |_____________________________________________________________| |"<<endl;
+gotoXY(50,19);
+cout<<"|_________________________________________________________________|"<<endl;
+gotoXY(50,20);
+cout<<"                   )__________|__|__________("<<endl;
+gotoXY(50,21);
+cout<<"                  |            ||            |"<<endl;
+gotoXY(50,22);
+cout<<"                  |____________||____________|"<<endl;
+gotoXY(50,23);
+cout<<"                    ),-----.(      ),-----.("<<endl;
+gotoXY(50,24);
+cout<<"                  ,'   ==.   \\    /  .==    `."<<endl;
+gotoXY(50,25);
+cout<<"                 /            )  (            \\"<<endl;
+
+
+gotoXY(65,14);
+HANDLE h= GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(h,13);
+cout<<"NARULA INSTITUTE OF TECHNOLOGY "<<endl;
+string phrase1 = "NARULA INSTITUTE OF TECHNOLOGY  ";
+        string command1 = "espeak \"" + phrase1 + "\"";
+        const char *charCommand1 = command1.c_str();
+        system(charCommand1);
+
+gotoXY(60,15);
+SetConsoleTextAttribute(h,13);
+cout<<"ELECTRINICS AND COMMUNICATION ENGINEERING"<<endl;
+string phrase2 = "ELECTRINICS AND COMMUNICATION ENGINEERING ";
+        string command2 = "espeak \"" + phrase2 + "\"";
+        const char *charCommand2 = command2.c_str();
+        system(charCommand2);
+
+gotoXY(60,16);
+SetConsoleTextAttribute(h,13);
+cout<<"NAME - NEHA KUMARI , ROLL NO.-430219020097"<<endl;
+string phrase3 = "NAME - NEHA KUMARI , ROLL NO.-430219020097 ";
+        string command3 = "espeak \"" + phrase3 + "\"";
+        const char *charCommand3 = command3.c_str();
+        system(charCommand3);
+
+        gotoXY(60,17);
+SetConsoleTextAttribute(h,13);
+
+cout<<"HOW ARE YOU"<<endl;
+string phrase4 = "HOW ARE YOU ";
+        string command4 = "espeak \"" + phrase4 + "\"";
+        const char *charCommand4 = command4.c_str();
+        system(charCommand4);
+
+gotoXY(50,26);
+//HANDLE h= GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(h,14);
+cout<<"                 `==========='    `==========='  "<<endl;
+
+}
+
+
+
+
+// function to greet the user according to time
+void greetings(){
+    // current date  and time based on your system timezone
+    time_t now = time(0);
+    tm *time = localtime(&now);
+
+    if (time-> tm_hour < 12){
+        cout<< "Good Morning Everyone"<<endl;
+        string phrase = "Good Morning Everyone";
+        string command = "espeak \"" + phrase + "\"";
+        const char *charCommand = command.c_str();
+        system(charCommand);
+    }
+
+    else if (time-> tm_hour >= 12 && time->tm_hour <= 16){
+        cout<< "Good Afternoon Everyone"<<endl;
+        string phrase = "Good Afternoon Everyone";
+        string command = "espeak \"" + phrase + "\"";
+        const char *charCommand = command.c_str();
+        system(charCommand);
+    }
+
+    else if (time-> tm_hour > 16 && time->tm_hour < 24){
+        cout<< "Good Evening  Everyone"<<endl;
+        string phrase = "Good Evening Everyone";
+        string command = "espeak \"" + phrase + "\"";
+        const char *charCommand = command.c_str();
+        system(charCommand);
+    }
+}
+
+void datetime(){
+    time_t now = time(0);
+    char *dt = ctime(&now);
+    cout<<"The date and time is "<<endl<<dt<<endl;
+string phrase5 = "The date and time is ";
+        string command5 = "espeak \"" + phrase5 + "\"";
+        const char *charCommand5 = command5.c_str();
+        system(charCommand5);
+}
+
+int main()
+{
+
+    system("cls");
+ teddy();
+ greetings();
+ datetime();
+HANDLE h= GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(h,12);
+    cout<<"\t\t\t\t                      ~~~~~~~~~~~~~~~  PERSONAL ASSISTANT ~~~~~~~~~~~~~~~"<<endl<<endl;
+string phrase = " I AM PERSONAL ASSISTANT";
+        string command3 = "espeak \"" + phrase + "\"";
+        const char *charCommand3 = command3.c_str();
+        system(charCommand3);
+
+    string password; //to take password
+    string command; // to take command from the user
+
+    do
+    {
+        SetConsoleTextAttribute(h,10);
+        cout<<"**********************************************************"<<endl;
+        cout<<"| ENTER THE PASSWORD TO CONFIRM YOU ARE  NEHA|"<<endl;
+        cout<<"**********************************************************"<<endl<<endl;
+        string phrase = " ENTER THE PASSWORD TO CONFIRM YOU ARE NEHA";
+        string command = "espeak \"" + phrase + "\"";
+        const char *charCommand = command.c_str();
+        system(charCommand);
+
+        getline(cin,password);
+
+        STARTUPINFO startInfo = {0};
+        PROCESS_INFORMATION processInfo = {0};
+
+        if(password=="ECE")
+        {
+
+
+            do{
+                cout<<"\n<********************************>\n\n\n";
+                cout<<endl<<"How can i help you guys...."<<endl<<endl;
+
+                string phrase = "How can i help you guys";
+                string command = "espeak \"" + phrase + "\"";
+                const char *charCommand = command.c_str();
+                system(charCommand);
+
+                cout<<"Enter your question ===> ";
+                getline(cin,command);
+                cout<<endl;
+                cout<<"Answer to your question is ===> ";
+
+                if(command=="hello personal assistant" || command=="hi")
+                {
+                    cout<<"Hello guys....."<<endl;
+                    string phrase = "Hello guys";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                }
+
+                 else if(command=="what is the time")
+                {
+
+                    datetime();
+                }
+
+
+                else if(command=="who are you" || command=="who is speaking")
+                {
+                    cout<<"I'm a personal assistant created by   neha "<<endl;
+                    string phrase = "I'm a personal assistant created by neha ";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                }
+                else if(command=="what is the vibe today" || command=="how are you")
+                {
+                    cout<<" Great.....I'm doing really well,  thank you "<<endl;
+                    string phrase = "Great.....I'm doing really well,  thank you ";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                }
+
+
+                else if(command=="open notepad")
+                {
+                    cout<<"openining notepad"<<endl;
+                    string phrase = "opening notepad";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    CreateProcess(TEXT("C:\\Windows\\notepad.exe"), NULL, NULL, NULL, FALSE, NULL, NULL, NULL, &startInfo, &processInfo);
+                }
+
+                else if(command=="open writepad")
+                {
+                    cout<<"opening writepad"<<endl;
+                    string phrase = "opening writepad";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    CreateProcess(TEXT("C:\\Windows\\write.exe"), NULL, NULL, NULL, FALSE, NULL, NULL, NULL, &startInfo, &processInfo);
+                }
+
+                else if(command=="open microsoft paint")
+                {
+                    cout<<"opening microsoft paint"<<endl;
+                    string phrase = "opening microsoft paint";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    CreateProcess(TEXT("C:\\Windows\\System32\\mspaint.exe"), NULL, NULL, NULL, FALSE, NULL, NULL, NULL, &startInfo, &processInfo);
+                }
+                else if(command=="open google")
+                {
+                    cout<<"openining google"<<endl;
+                    string phrase = "opening google";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start https://www.google.com");
+                }
+                else if(command=="open flipkart")
+                {
+                    cout<<"openining flipkart"<<endl;
+                    string phrase = "opening chrome";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start https://www.flipkart.com/");
+                }
+
+                else if(command=="open jiosaavn")
+                {
+                    cout<<"openining jiosaavn"<<endl;
+                    string phrase = "opening chrome";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start https://www.jiosaavn.com/");
+
+                }
+
+                else if(command=="open youtube")
+                {
+                    cout<<"openining Youtube"<<endl;
+                    string phrase = "opening youtube";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system("start https://www.youtube.com");
+                }
+                else if(command=="open photo")
+                {
+                    cout<<"opening photo"<<endl;
+                    string phrase = "opening photo";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    ShellExecute(NULL,"open","https://images.app.goo.gl/nfn6fQyktKByBpF39",NULL, NULL, SW_NORMAL);
+                }
+                else if(command=="open facebook")
+                {
+                    cout<<"opening facebook"<<endl;
+                    string phrase = "opening facebook";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    system(" start https://www.facebook.com/");
+                }
+                else if(command=="bye" || command=="exit")
+                {
+                    cout<<"Good Bye  guys, see you soon!"<<endl;
+                    string phrase = "Good Bye guys, see you soon!";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                    exit(0);
+                }
+
+                else
+                {
+                    cout<<"Sorry could not understand your command please try again !!!"<<endl;
+                    string phrase = "Sorry could not understand your command please try again";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                }
+
+
+            }while(1);
+        }
+        else
+                {
+                    system("cls");
+
+                    cout<<"\t<###################################  PERSONAL ASSISSTANT ########################################"<<endl<<endl;
+                    cout << "********" << endl;
+                    cout << "X Incorrect Password X" << endl;
+                    cout << "********" << endl << endl;
+
+                    string phrase = "Incorrect Password, please enter correct password";
+                    string command = "espeak \"" + phrase + "\"";
+                    const char *charCommand = command.c_str();
+                    system(charCommand);
+                }
+    } while (1);
+
+
+    return 0;
+}
+
